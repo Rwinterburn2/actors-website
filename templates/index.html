@@ -4,17 +4,15 @@
 
 {% block content %}
 <section id="three-panels">
-    <div class="panel panel1">
+    <a href="{{ url_for('resume') }}" class="panel panel1">
         <h2>Resume</h2>
-
-    </div>
-    <div class="panel panel2">
+    </a>
+    <a href="{{ url_for('showreel') }}" class="panel panel2">
         <h2>Showreel</h2>
-
-    </div>
-    <div class="panel panel3">
+    </a>
+    <a href="{{ url_for('contact') }}" class="panel panel3">
         <h2>Contact</h2>
-
-    </div>
+    </a>
 </section>
+
 {% endblock %}

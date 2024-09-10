@@ -3,18 +3,17 @@
 {% block title %}Gallery{% endblock %}
 
 {% block content %}
-<section id="three-panels">
-    <div class="panel panel1">
-        <h2>Resume</h2>
-
-    </div>
-    <div class="panel panel2">
-        <h2>Showreel</h2>
-
-    </div>
-    <div class="panel panel3">
-        <h2>Contact</h2>
-
+<section id="resume">
+    <h2>Acting Resume</h2>
+    <div class="resume-list">
+        {% for video in videos %}
+        <div class="resume-item">
+            <h3>{{ video.title }} - {{ video.company }}</h3>
+            <p><strong>Duration:</strong> {{ video.duration }}</p>
+            <p><strong>Description:</strong> {{ video.description }}</p>
+        </div>
+        {% endfor %}
     </div>
 </section>
+
 {% endblock %}

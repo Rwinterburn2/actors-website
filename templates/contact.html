@@ -3,18 +3,20 @@
 {% block title %}Gallery{% endblock %}
 
 {% block content %}
-<section id="three-panels">
-    <div class="panel panel1">
-        <h2>Resume</h2>
+<section class="form-container">
+    <h2>Contact Me</h2>
+    <form action="send_email.php" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-    </div>
-    <div class="panel panel2">
-        <h2>Showreel</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    </div>
-    <div class="panel panel3">
-        <h2>Contact</h2>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-    </div>
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
 </section>
+
 {% endblock %}
