@@ -128,6 +128,13 @@ footer {
 }
 
 .panel {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
+        text-align: center; /* Center text horizontally */
+        color: #fff; /* Text color */
+
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     padding: 30px;
@@ -158,7 +165,8 @@ footer {
 
 .panel:hover {
     transform: scale(0.98); /* Slightly decrease the size */
-    filter: brightness(85%); /* Make the panel slightly darker */
+    filter: brightness(60%); /* Make the panel slightly darker */
+    border-radius: 10px;
 }
 
 h2 {
