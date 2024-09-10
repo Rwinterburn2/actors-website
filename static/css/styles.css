@@ -1,0 +1,172 @@
+/* Import stylish font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Default font */
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Add a stylish heading font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Stylish heading font */
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100px;
+}
+
+nav .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .menu-icon .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    margin: 0;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Ensure nav links use the same font as body */
+}
+
+nav .nav-links a:hover {
+    color: #ff9800;
+}
+
+nav .navbar-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif; /* Stylish font for title */
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #222;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-links.show {
+        display: flex;
+    }
+
+    nav .menu-icon {
+        display: flex;
+    }
+
+    nav .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+
+    nav .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Three Panels Styling */
+#three-panels {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /* Create three equal-height rows */
+    height: 100vh; /* Full viewport height */
+}
+
+.panel {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Text color */
+}
+
+.panel1 {
+    background-image: url('/imgs/panel.still001.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire panel */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+}
+.panel2 {
+    background-image: url('/static/imgs/panel.still001.jpg'); /* Updated image path */
+    background-size: cover; /* Cover the entire panel */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+    min-height: 300px; /* Ensure there's enough height */
+}
+
+.panel3 {
+    background-image: url('/imgs/panel.still003.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire panel */
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Heading font */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif; /* Body font */
+}
