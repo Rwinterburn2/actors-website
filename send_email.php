@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Recipient email (your email where you want to receive the messages)
-    $to = "recipient@example.com";  // Replace with your actual email
+    $to = "robertwinterburnii@gmail.com";  // Replace with your actual email
 
     // Subject of the email
-    $subject = "New Contact Form Submission";
+    $subject = "New Message from Website";
 
     // Email body content
     $body = "Name: $name\n";
