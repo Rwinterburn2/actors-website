@@ -3,16 +3,24 @@
 {% block title %}Gallery{% endblock %}
 
 {% block content %}
-<section id="three-panels">
-    <a href="{{ url_for('resume') }}" class="panel panel1">
-        <h2>Resume</h2>
-    </a>
-    <a href="{{ url_for('showreel') }}" class="panel panel2">
-        <h2>Showreel</h2>
-    </a>
-    <a href="{{ url_for('contact') }}" class="panel panel3">
-        <h2>Contact</h2>
-    </a>
+<section id="main">
+    <div>
+      <img src="/static/imgs/panel.still001.jpg" alt="Description of the image" id="main-img" />
+  
+      <div id="main-text">
+          <h1>Robert Winterburn</h1>
+        <h2>Actor | Performer | Voice Artist</h2>
+        <h4>Featured on</h4>
+        <p><strong>Drip</strong>: Directed by Conor Dwyer <br>
+        <strong>Sober</strong>: Directed by Matthew Cooper</p>
+        <br>
+        <h3>Training</h3>
+        <p><strong>Act Up North</strong>: 2023-Present</p>
+      </div>
+    </div>
+  </section>
+  
+
 </section>
 
 {% endblock %}
