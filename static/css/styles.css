@@ -79,6 +79,7 @@ nav .navbar-title {
     text-align: center;
 }
 /* Style for the section */
+
 /* Style for the section */
 #main div {
     display: flex; /* Use flexbox for layout */
@@ -87,37 +88,105 @@ nav .navbar-title {
   }
   
   /* Style for the image */
-  #main img {
-    max-height: 30%; /* Set image width */
-    height: 100vh; /* Keep image proportions */
-    margin-left: 10px;
-    border: blue;
-    border-radius: 10%; /* Add spacing between text and image */
-  }
-  
+/* Main Section Layout */
+#main {
+    display: flex; /* Side-by-side layout */
+    align-items: center; /* Vertically align content */
+    justify-content: space-evenly; /* Space out image and text */
+    gap: 100px; /* Add spacing between the two sections */
+    padding: 10px;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Contain absolutely positioned children */
+    overflow: hidden; /* Prevent carousel from spilling outside */
+}
 
+/* Image Styling with Fading Effect */
+#main img {
+    max-height: 80%; /* Adjust size for responsiveness */
+    height: 30%;
+    width: 30%;
+    border-radius: 10%; /* Smooth corners */
+    object-fit: cover; /* Maintain aspect ratio */
+    animation: fade 12s infinite; /* Fading animation */
+    transition: transform 0.3s ease;
+}
 
-  /* Style for the text container */
-  #main-text {
+#main img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text Container Styling */
+#main-text {
+    position: relative;
     max-width: 50%; /* Limit text width */
-    display: flex; /* Flexbox for vertical alignment */
-    flex-direction: column; /* Stack children vertically */
-    gap: 15px; /* Add spacing between h2 and p */
-    text-align: center;
-  }
-  
-  /* Optional: Style for the heading */
-  #main-text h2 {
-    font-size: 1.8rem; /* Customize font size */
-    margin: 0; /* Reset default margin */
-  }
-  
-  /* Optional: Style for the paragraph */
-  #main-text p {
-    font-size: 1rem; /* Customize font size */
-    margin: 0;
- /* Reset default margin */
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+/* Align text to the left */
+}
+
+#main-text h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+#main-text h2 {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+#main-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Fading Animation */
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    50% { opacity: 1; }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Fading Image Carousel */
+#fade-carousel img {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 30%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 18s infinite;
+}
+
+#fade-carousel img:nth-child(1) { animation-delay: 0s; }
+#fade-carousel img:nth-child(2) { animation-delay: 3s; }
+#fade-carousel img:nth-child(3) { animation-delay: 6s; }
+#fade-carousel img:nth-child(4) { animation-delay: 9s; }
+#fade-carousel img:nth-child(5) { animation-delay: 12s; }
+#fade-carousel img:nth-child(6) { animation-delay: 15s; }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    #main img {
+        max-height: 60%; /* Smaller image size */
+        margin-bottom: 20px;
+    }
+
+    #main-text {
+        max-width: 90%; /* Expand text width on small screens */
+    }
+}
   
   
 /* Footer Styling */
