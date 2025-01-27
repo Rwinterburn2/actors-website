@@ -24,10 +24,9 @@ def contact():
     data = software()
     return render_template('contact.html', **data)
 
-@app.route('/spotlight')
-def spotlight():
-    data = spotlight()
-    return render_template('spotlight.html', **data)
+@app.route('/Gallery')
+def Gallery():
+    return render_template('gallery.html')
 
 
 if __name__ == '__main__':
