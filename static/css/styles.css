@@ -88,11 +88,15 @@ nav .navbar-title {
   
   /* Style for the image */
   #main img {
-    max-width: 40%; /* Set image width */
-    height: auto; /* Keep image proportions */
-    margin-left: 10px; /* Add spacing between text and image */
+    max-height: 30%; /* Set image width */
+    height: 100vh; /* Keep image proportions */
+    margin-left: 10px;
+    border: blue;
+    border-radius: 10%; /* Add spacing between text and image */
   }
   
+
+
   /* Style for the text container */
   #main-text {
     max-width: 50%; /* Limit text width */
