@@ -1,27 +1,28 @@
 from flask import Flask, render_template
-from models import software
+from models import experience
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    data = software()
+    data = experience()
+    
     return render_template('index.html', **data)
 
 @app.route('/resume')
 def resume():
-    data = software()
+    data = experience()
     return render_template('resume.html', **data)
 
 @app.route('/showreel')
 def showreel():
-    data = software()
+    data = experience()
     return render_template('showreel.html', **data)
 
 @app.route('/contact')
 def contact():
-    data = software()
+    data = experience()
     return render_template('contact.html', **data)
 
 @app.route('/Gallery')
